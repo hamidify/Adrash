@@ -22,6 +22,9 @@ public class MainActivity extends AppCompatActivity {
         navigationView = findViewById(R.id.navigation_view);
         drawerLayout = findViewById(R.id.drawer_layout);
         setSupportActionBar(toolbar);
+
+        //Prevent from tinting the Icons.
+        navigationView.setItemIconTintList(null);
 //        toolbar.setNavigationIcon(R.drawable.nav);
 
         if (getSupportActionBar() != null) {

@@ -30,10 +30,8 @@
 
     </style>
 
-    <style
-        name="NavHeaderTextStyle"
-        >
-        <item name="android:textColor">#FF4A4A4A</item>
+    <style name="NavHeaderTextStyle">
+        <item name="android:textColor">#FFFFFF</item>
     </style>
     <style name="DrawerArrowStyle" parent="@style/Widget.AppCompat.DrawerArrowToggle">
         <item name="spinBars">true</item>
@@ -43,8 +41,6 @@
     <style name="AppTheme.Main" parent="Theme.AppCompat.Light.DarkActionBar">
         <item name="windowNoTitle">true</item>
         <item name="windowActionBar">false</item>
-        <item name="colorPrimary">@color/colorPrimary</item>
-        <item name="colorPrimaryDark">@color/colorPrimaryDark</item>
         <item name="colorAccent">@color/white</item>
         <item name="drawerArrowStyle">@style/DrawerArrowStyle</item>
     </style>
@@ -53,6 +49,5 @@
         <!--This line changes the color of text in Toolbar-->
         <item name="android:textColorPrimary">@color/colorAccent</item>
         <!--This line changes the color of icons in toolbar (back, overflow menu icons)-->
-        <item name="android:textColorSecondary">@color/colorAccent</item>
     </style>
 </resources>
