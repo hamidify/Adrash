@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@color/colorPrimaryDark"
+    tools:context=".SplashActivity">
+
+    <ImageView
+        android:id="@+id/splashLogoIcon"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/logo_margin"
+        android:padding="@dimen/drawer_header_padding"
+        android:layout_centerHorizontal="true"
+        android:contentDescription="@string/app_logo"
+        app:srcCompat="@drawable/ic_app_logo"/>
+    <ImageView
+    android:id="@+id/trailer_truck"
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_margin="@dimen/padding_top"
+    android:padding="@dimen/drawer_header_padding"
+    android:layout_centerInParent="true"
+    android:contentDescription="@string/app_logo"
+    app:srcCompat="@drawable/ic_trailer_truck"/>
+
+    <TextView
+        android:id="@+id/splashCopyrightLabel"
+        android:layout_width="wrap_content"
+        android:text="@string/copyright"
+        android:layout_marginBottom="24dp"
+        android:layout_alignParentBottom="true"
+        android:layout_centerHorizontal="true"
+        android:textColor="@android:color/white"
+        android:layout_height="wrap_content" />
+</RelativeLayout>
