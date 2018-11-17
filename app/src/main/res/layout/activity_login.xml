@@ -1,7 +1,6 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/login_container"
     android:layout_width="match_parent"
@@ -16,8 +15,10 @@
     <ImageView
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:tint="@color/colorPrimaryDark"
         android:layout_gravity="center_horizontal"
         android:layout_marginTop="@dimen/padding_top"
+        android:layout_marginBottom="@dimen/drawer_header_padding"
         android:contentDescription="@string/app_logo"
         android:paddingStart="@dimen/padding_top"
         android:paddingLeft="@dimen/padding_top"
@@ -36,7 +37,6 @@
             android:layout_height="wrap_content"
             android:layout_marginTop="@dimen/margin_card"
             android:layout_marginBottom="@dimen/margin_card"
-            android:background="@color/background"
             android:orientation="horizontal">
 
             <TextView
@@ -45,7 +45,7 @@
                 android:layout_marginEnd="@dimen/padding"
                 android:layout_marginRight="@dimen/padding"
                 android:layout_weight="1"
-                android:background="@drawable/border"
+                android:background="@drawable/phone_number_border"
                 android:gravity="center"
                 android:paddingTop="@dimen/padding"
                 android:paddingBottom="@dimen/padding"
@@ -53,17 +53,18 @@
                 android:textColor="@color/colorPrimary" />
 
             <android.support.design.widget.TextInputLayout
-                android:layout_width="@dimen/zero_length"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="4">
 
                 <EditText
                     android:id="@+id/login_phone_number"
-                    style="@style/AppTheme.EditText"
                     android:layout_width="match_parent"
                     android:layout_height="wrap_content"
+
                     android:hint="@string/phone_number_hint"
-                    android:inputType="phone" />
+                    android:inputType="phone"
+                    android:textColor="@color/colorPrimaryDark" />
             </android.support.design.widget.TextInputLayout>
         </LinearLayout>
 
@@ -76,11 +77,11 @@
 
             <EditText
                 android:id="@+id/login_password"
-                style="@style/AppTheme.EditText"
                 android:layout_width="match_parent"
                 android:layout_height="wrap_content"
                 android:hint="@string/password_hint"
-                android:inputType="textPassword" />
+                android:inputType="textPassword"
+                android:textColor="@color/colorPrimaryDark" />
         </android.support.design.widget.TextInputLayout>
 
         <android.support.v7.widget.AppCompatButton
@@ -99,24 +100,24 @@
 
             <TextView
                 android:id="@+id/forgot_password"
-                style="@style/AppTheme.TextView"
-                android:layout_width="@dimen/zero_length"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_top"
                 android:layout_weight="1"
                 android:gravity="start"
                 android:text="@string/forgot_password_string"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/sign_up_text_size" />
 
             <TextView
                 android:id="@+id/link_create_account"
-                style="@style/AppTheme.TextView"
-                android:layout_width="@dimen/zero_length"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_marginBottom="@dimen/padding_top"
                 android:layout_weight="1"
                 android:gravity="end"
                 android:text="@string/create_one"
+                android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/sign_up_text_size" />
         </LinearLayout>
     </LinearLayout>

@@ -18,7 +18,7 @@ public class SplashActivity extends AppCompatActivity {
             @Override
             public void run() {
                 util = new Utils(SplashActivity.this);
-                if (Utils.isLoggedIn() ) {
+                if (!Utils.isLoggedIn() ) {
                     final Intent intent = new Intent(SplashActivity.this, MainActivity.class);
                     startActivity(intent);
                     finish();
