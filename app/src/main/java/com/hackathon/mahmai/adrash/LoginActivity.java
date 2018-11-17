@@ -1,17 +1,16 @@
 package com.hackathon.mahmai.adrash;
 
+import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.hackathon.mahmai.adrash.services.API;
-import com.hackathon.mahmai.adrash.services.DriverModel;
+import com.hackathon.mahmai.adrash.models.DriverModel;
 import com.hackathon.mahmai.adrash.services.ServiceBuilder;
 
-import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.Map;
 
@@ -39,10 +38,16 @@ public class LoginActivity extends AppCompatActivity {
         credentials.put("password","passmee");
         API loginService = ServiceBuilder.buildService(API.class);
         Call<DriverModel> login = loginService.userLogIn(credentials);
+        final ProgressDialog pd = new ProgressDialog(LoginActivity.this);
+        pd.setMessage("Loading ...");
+        if(LoginActivity.this != null &&  !pd.isShowing()){
+            pd.show();
+        }
         login.enqueue(new Callback<DriverModel>() {
             @Override
             public void onResponse(Call<DriverModel> call, Response<DriverModel> response) {
                 try{
+                    pd.dismiss();
                     if(response.isSuccessful()){
                         Toast.makeText(LoginActivity.this, "Successfully Loged in.", Toast.LENGTH_SHORT).show();
                         Intent intent = new Intent(LoginActivity.this, MainActivity.class);
@@ -59,6 +64,7 @@ public class LoginActivity extends AppCompatActivity {
 
             @Override
             public void onFailure(Call<DriverModel> call, Throwable t) {
+                pd.dismiss();
                 Toast.makeText(LoginActivity.this, "Something went wrong.", Toast.LENGTH_SHORT).show();
             }
         });
