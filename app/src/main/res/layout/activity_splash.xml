@@ -15,7 +15,7 @@
         android:padding="@dimen/drawer_header_padding"
         android:layout_centerHorizontal="true"
         android:contentDescription="@string/app_logo"
-        app:srcCompat="@drawable/ic_app_logo"/>
+        app:srcCompat="@drawable/ic_logo"/>
     <ImageView
     android:id="@+id/trailer_truck"
     android:layout_width="wrap_content"

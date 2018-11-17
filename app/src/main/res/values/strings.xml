@@ -8,4 +8,10 @@
     <string name="login">Get in</string>
     <string name="forgot_password_string">Forgot Password</string>
     <string name="create_one">Register</string>
+    <string name="firstName_hint">First Name</string>
+    <string name="lastName_hint">Last Name</string>
+    <string name="optional">Email (optional)</string>
+    <string name="confirm_password_hint">Confirm password</string>
+    <string name="register">Register</string>
+    <string name="got_one">Got an account? Login</string>
 </resources>

@@ -24,7 +24,7 @@
         android:paddingLeft="@dimen/padding_top"
         android:paddingEnd="@dimen/padding_top"
         android:paddingRight="@dimen/padding_top"
-        app:srcCompat="@drawable/ic_app_logo" />
+        app:srcCompat="@drawable/ic_logo_text" />
 
     <LinearLayout
         android:layout_width="match_parent"
@@ -89,6 +89,7 @@
             android:layout_width="fill_parent"
             android:layout_height="wrap_content"
             android:layout_marginTop="24dp"
+            android:onClick="onLogin"
             android:textColor="@color/white"
             android:backgroundTint="@color/colorPrimaryDark"
             android:layout_marginBottom="24dp"
@@ -118,6 +119,7 @@
                 android:layout_marginBottom="@dimen/padding_top"
                 android:layout_weight="1"
                 android:gravity="end"
+                android:onClick="openRegistration"
                 android:text="@string/create_one"
                 android:textColor="@color/colorPrimaryDark"
                 android:textSize="@dimen/sign_up_text_size" />
