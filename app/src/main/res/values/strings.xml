@@ -14,4 +14,11 @@
     <string name="confirm_password_hint">Confirm password</string>
     <string name="register">Register</string>
     <string name="got_one">Got an account? Login</string>
+
+
+    <string name="site_menu_home">Home</string>
+    <string name="site_menu_profile">Profile</string>
+    <string name="site_menu_saved_items">Element Salvati</string>
+    <string name="site_menu_check_in">Check In</string>
+    <string name="site_menu_setting">Settings</string>
 </resources>
