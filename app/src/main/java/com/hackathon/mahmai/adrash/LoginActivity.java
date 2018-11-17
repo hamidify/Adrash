@@ -4,19 +4,15 @@ import android.app.ProgressDialog;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
 import com.hackathon.mahmai.adrash.services.API;
-import com.hackathon.mahmai.adrash.services.DriverModel;
+import com.hackathon.mahmai.adrash.models.DriverModel;
 import com.hackathon.mahmai.adrash.services.ServiceBuilder;
 
-import java.net.HttpURLConnection;
 import java.util.HashMap;
 import java.util.Map;
-
-import javax.security.auth.login.LoginException;
 
 import retrofit2.Call;
 import retrofit2.Callback;

@@ -1,4 +1,4 @@
-package com.hackathon.mahmai.adrash.services;
+package com.hackathon.mahmai.adrash.models;
 import com.google.gson.annotations.Expose;
 import com.google.gson.annotations.SerializedName;
 
