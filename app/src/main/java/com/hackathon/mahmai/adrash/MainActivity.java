@@ -6,6 +6,9 @@ import android.support.v4.widget.DrawerLayout;
 import android.support.v7.app.ActionBarDrawerToggle;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.support.v7.widget.DefaultItemAnimator;
+import android.support.v7.widget.LinearLayoutManager;
+import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.Toolbar;
 
 public class MainActivity extends AppCompatActivity {
@@ -34,12 +37,25 @@ public class MainActivity extends AppCompatActivity {
             drawerLayout.setDrawerListener(drawerToggle);
             drawerToggle.syncState();
         }
+        setUpRecyclerView();
     }
     @Override
     protected void onPostCreate(@Nullable Bundle savedInstanceState) {
         super.onPostCreate(savedInstanceState);
-
         //To change the hamburger icon to back arrow and vice versa
         drawerToggle.syncState();
+    }
+
+    private void setUpRecyclerView() {
+
+        RecyclerView recyclerView =  findViewById(R.id.item_recycler);
+        HomeAdapter adapter = new HomeAdapter(this, Goods.getData());
+        recyclerView.setAdapter(adapter);
+
+        LinearLayoutManager mLinearLayoutManagerVertical = new LinearLayoutManager(this); // (Context context, int spanCount)
+        mLinearLayoutManagerVertical.setOrientation(LinearLayoutManager.VERTICAL);
+        recyclerView.setLayoutManager(mLinearLayoutManagerVertical);
+
+        recyclerView.setItemAnimator(new DefaultItemAnimator()); // Even if we dont use it then also our items shows default animation. #Check Docs
     }
 }
